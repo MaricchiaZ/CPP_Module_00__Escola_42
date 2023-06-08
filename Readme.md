@@ -31,12 +31,12 @@ Você também encontrará pastas e arquivos que seguem a didática dos vídeos d
 
 Clone este repositório em seu computador.
 ```bash
-git clone https://github.com/seu-usuario/cpp00.git
+git clone https://github.com/MaricchiaZ/CPP_Module_00__Escola_42
 ```
 
 Navegue até o diretório do exercício desejado.
 ```bash
-cd cpp00/ex00
+cd CPP_Module_00__Escola_42/ex00
 ```
 
 Leia as instruções fornecidas no arquivo README.md do exercício.
