@@ -27,6 +27,23 @@ O projeto é dividido em uma série de exercícios numerados, como ex00, ex01, e
 Dentro de cada exercício, você encontrará um conjunto de arquivos de código fonte e/ou cabeçalhos para serem modificados ou implementados.
 Você também encontrará pastas e arquivos que seguem a didática dos vídeos da intra42. Eles me ajudaram a ter uma base para começar o projeto.
 
+## Arquivos de Estudo
+
+A ordem dos arquivos de estudo é:
+
+1. Estudo_namespace
+2. Estudo_stdio
+3. Estudo_classes
+4. Estudo_member_attribute
+5. Estudo_this
+6. Estudo_list
+7. Estudo_accessor
+8. Estudo_comparisons
+9. Estudo_non_member
+10. Estudo_pointer
+
+Os arquivos estão comentados de modo que podemos compreender um conceito novo a cada arquivo estudado.
+
 ## Como Usar
 
 Clone este repositório em seu computador.
@@ -39,9 +56,9 @@ Navegue até o diretório do exercício desejado.
 cd CPP_Module_00__Escola_42/ex00
 ```
 
-Leia as instruções fornecidas no arquivo README.md do exercício.
+Leia os comentários presentes em cada função para entender os conceitos novos e encontre o comando para a complilação comentado no fim da função main.
 
-Modifique ou implemente os arquivos de código fonte conforme necessário.
+Modifique ou implemente os arquivos de código fonte conforme necessário para o seu aprendizado.
 
 Compile o código usando um compilador de C++.
 ```bash
