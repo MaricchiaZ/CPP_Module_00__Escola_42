@@ -7,7 +7,7 @@ class Sample{ // A palavra-chave class é usada para definir uma classe. No caso
 public: // A palavra-chave public é chamada de modificador de acesso e indica que os membros subsequentes
 // da classe (Sample) são acessíveis a partir de qualquer lugar.
 
-    int foo; // aqui estamos instanciando um objeto que pertencerá a essa classe
+    int foo; // aqui estamos declarando a variável que pertence a essa classe
 
 // aqui são declaradas as funções da classe Sample
 

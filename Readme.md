@@ -37,10 +37,12 @@ A ordem dos arquivos de estudo é:
 4. Estudo_member_attribute
 5. Estudo_this
 6. Estudo_list
-7. Estudo_accessor
-8. Estudo_comparisons
-9. Estudo_non_member
-10. Estudo_pointer
+7. Estudo_visibility
+8. Esudo_class_X_struct
+9. Estudo_accessor
+10. Estudo_comparisons
+11. Estudo_non_member
+12. Estudo_pointer
 
 Os arquivos estão comentados de modo que podemos compreender um conceito novo a cada arquivo estudado.
 

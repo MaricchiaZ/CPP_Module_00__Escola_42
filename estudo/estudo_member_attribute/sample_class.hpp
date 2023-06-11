@@ -18,7 +18,7 @@ public: // A palavra-chave public é chamada de modificador de acesso e indica q
 // da classe (Sample) são acessíveis a partir de qualquer lugar.
 
 // aqui vão os ATRIBUTOS da classe Sample (nesse caso temos apenas 1 atributo o "int foo")
-    int foo; // aqui estamos instanciando um objeto que pertencerá a essa classe
+    int foo; // aqui estamos declarando as variáveis que pertencem a essa classe
 
 // aqui são declaradas as funções ou MÉTODOS da classe Sample
 

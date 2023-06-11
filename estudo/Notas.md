@@ -28,3 +28,22 @@ Para começar a estudar C++, é útil ter um bom entendimento dos conceitos fund
 *Herança:* A herança é um mecanismo que permite que uma classe herde atributos e métodos de outra classe. A classe que herda é chamada de classe derivada ou subclasse, enquanto a classe da qual ela herda é chamada de classe base ou superclasse. A herança permite reutilização de código e a criação de hierarquias de classes.
 
 *Polimorfismo:* O polimorfismo permite que um objeto seja tratado de várias maneiras diferentes. Isso ocorre porque objetos de classes diferentes podem ser usados ​​por meio de uma interface comum. O polimorfismo é frequentemente alcançado por meio de herança e funções virtuais. Por exemplo, você pode ter uma função "tocar()" que pode ser chamada em diferentes objetos, como um objeto "Cachorro" ou um objeto "Gato", produzindo comportamentos diferentes.
+
+### Namespace e Classes
+
+Um namespace e uma classe são duas entidades distintas, mas podem estar relacionadas em um programa C++.
+
+Um namespace é uma forma de agrupar declarações, definições e outros elementos em um escopo específico. Ele ajuda a evitar conflitos de nomes e organiza o código de forma mais modular. Os elementos em um namespace podem incluir classes, funções, variáveis e outros namespaces.
+
+Uma classe, por sua vez, é uma estrutura que define um tipo de objeto com seus atributos (dados) e métodos (comportamentos). Ela encapsula dados e funcionalidades relacionadas em uma única unidade. As classes podem estar dentro de um namespace ou não.
+
+A relação entre um namespace e uma classe pode ser estabelecida ao usar um namespace para definir ou envolver uma classe. Isso significa que a classe faz parte do namespace especificado. 
+Por exemplo:
+
+```cpp
+namespace MyNamespace {
+    class MyClass {
+        // Implementação da classe
+    };
+}
+```
