@@ -1,6 +1,6 @@
-NAME=	phonebook
+NAME=	tests
 
-SRCS=	PhoneBook.cpp Contact.cpp main.cpp
+SRCS=	Account.cpp tests.cpp
 OBJS=	$(SRCS:.cpp=.o)
 
 RM=		rm -rf
