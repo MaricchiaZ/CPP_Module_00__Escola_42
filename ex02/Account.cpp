@@ -6,7 +6,7 @@
 /*   By: maclara- <maclara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 17:07:00 by maclara-          #+#    #+#             */
-/*   Updated: 2023/06/15 18:42:37 by maclara-         ###   ########.fr       */
+/*   Updated: 2023/07/04 18:56:14 by maclara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 #include <iostream>
 #include <ctime>
 
-// inicializando as variáveis
 	int	Account::_nbAccounts = 0;
 	int	Account::_totalAmount = 0;
 	int	Account::_totalNbDeposits = 0;
@@ -27,27 +26,25 @@
 	int _nbDeposits = 0;
 	int _nbWithdrawals = 0;
 
-// constructor e destructor 
 Account::Account(int initial_deposit):
 	_accountIndex(_nbAccounts), _amount(initial_deposit), _nbDeposits(0), _nbWithdrawals(0){
         
 	Account::_nbAccounts++;
 	Account::_totalAmount += initial_deposit;
-	_displayTimestamp(); // Data-hora em que ocorre a operação
+	_displayTimestamp(); 
     
 	std::cout << "index:" << _accountIndex << ";" << "amount:" << _amount << ";" << "created" << std::endl;
 }
 
 Account::~Account(void){
 
-	_displayTimestamp(); // Data-hora em que ocorre a operação
+	_displayTimestamp();
     
 	std::cout << "index:" << this->_accountIndex << ";amount:" << checkAmount() << ";closed" << std::endl;
 	_nbAccounts--;
 	_totalAmount -= checkAmount();
 }
 
-// getters
 int	Account::getNbAccounts( void ){
 	return (Account::_nbAccounts);
 }
@@ -64,13 +61,11 @@ int	Account::getNbWithdrawals( void ){
 	return (Account::_totalNbWithdrawals);
 }
 
-// funções membros
-
 void	Account::makeDeposit(int deposit) {
     
 	const int	p_amount = this->_amount;
     
-	_displayTimestamp();  // Data-hora em que ocorre a operação
+	_displayTimestamp();
 
 	this->_amount += deposit;
 	Account::_totalAmount += deposit;
@@ -83,7 +78,7 @@ void	Account::makeDeposit(int deposit) {
 
 bool	Account::makeWithdrawal(int withdrawal) {
     
-	_displayTimestamp(); // Data-hora em que ocorre a operação
+	_displayTimestamp();
     
 	if (_amount - withdrawal < 0) {
 		std::cout << "index:" << this->_accountIndex << ";p_amount:" << _amount
@@ -108,7 +103,7 @@ int	Account::checkAmount( void ) const{
 
 void	Account::displayStatus(void) const {
     
-	_displayTimestamp(); // Data-hora em que ocorre a operação
+	_displayTimestamp();
     
 	std::cout << "index:" << this->_accountIndex << ";amount:" << checkAmount()
 	<< ";deposits:" << this->_nbDeposits << ";withdrawals:" << this->_nbWithdrawals
@@ -119,7 +114,7 @@ void	Account::displayStatus(void) const {
 // funções não membros
 void	Account::displayAccountsInfos(void) {
     
-	Account::_displayTimestamp(); // Data-hora em que ocorre a operação
+	Account::_displayTimestamp();
     
 	std::cout << "accounts:" << Account::getNbAccounts() << ";"
 	<< "total:" << Account::getTotalAmount() << ";"
@@ -132,12 +127,14 @@ void	Account::_displayTimestamp(void) {
     
 	const std::time_t	time = std::time(NULL);
 	const std::string	format = "%Y%m%d_%H%M%S";
-	char				timestamp[16]; // YYYYmmdd_HHMMSS
+	char				timestamp[16];
     
-	std::strftime(timestamp, 16, format.c_str(), std::localtime(&time)); // salva a data e hora na strftime
-	std::cout << "[" << timestamp << "] "; // printa as chaves, a data_hora e o espaço depois
+	std::strftime(timestamp, 16, format.c_str(), std::localtime(&time));
+	std::cout << "[" << timestamp << "] ";
 }
 
+
+// Como testar o projeto:
 // ./tests | awk '{$1=""; print $0}' >> a 
 // awk '{$1=""; print $0}' log.log >> b
 // diff a b >> c

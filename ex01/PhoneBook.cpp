@@ -6,7 +6,7 @@
 /*   By: maclara- <maclara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 16:46:17 by maclara-          #+#    #+#             */
-/*   Updated: 2023/06/15 16:56:48 by maclara-         ###   ########.fr       */
+/*   Updated: 2023/07/04 18:54:36 by maclara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,9 @@ void    PhoneBook::add(void){
     Contact new_contact;
     std::string temp_buffer;
     
-    std::cin.ignore(); // a função ignore do objeto std::cin descarta qualquer caractere pendente no buffer de entrada.
+    std::cin.ignore(); 
     std::cout << "Add Contact infos" << std::endl;
-    
-    // get de First Name and save in new_contact
+
     temp_buffer = "";
     std::cout << "First name: ";
     std::cin >> temp_buffer;
@@ -40,7 +39,6 @@ void    PhoneBook::add(void){
     }
     new_contact.setFirstName(temp_buffer);
 
-    // get Last Name and save in new_contact
     temp_buffer = "";
     std::cout << "Last Name: ";
     std::cin >> temp_buffer;
@@ -49,8 +47,7 @@ void    PhoneBook::add(void){
         return ;
     }
     new_contact.setLastName(temp_buffer);
-    
-    // get Nickname and save in new_contact
+
     temp_buffer = "";
     std::cout << "Nickname: ";
     std::cin >> temp_buffer;
@@ -60,7 +57,6 @@ void    PhoneBook::add(void){
     }
     new_contact.setNickname(temp_buffer);
 
-    // get Phone number and save in new_contact
     temp_buffer = "";
     std::cout << "Phone number: ";
     std::cin >> temp_buffer;
@@ -68,11 +64,9 @@ void    PhoneBook::add(void){
 		std::cout << "Invalid input" << std::endl << std::endl;
 		return ;
     }
-    // verifica se há algum caractere no número de telefone que não seja um dígito de 0 a 9. O método 
-    // find_first_not_of é usado para encontrar o primeiro caractere que não faz parte da lista de dígitos fornecida.
+
     new_contact.setPhoneNumber(temp_buffer);
 
-    // get Darkest secret and save in new_contact
     temp_buffer = "";
     std::cout << "Darkest secret: ";
     std::cin >> temp_buffer;
@@ -139,8 +133,7 @@ void	PhoneBook::printInfo(Contact contact, int index) {
 	if (format.getDarkestSecret().length() > 10) {
 		format.setDarkestSecret(format.getDarkestSecret().substr(0, 9) + '.');
 	}
-	std::cout << "|" << std::setw(10) << index; // A função std::setw(10) é usada para definir uma largura 
-    // fixa de 10 caracteres para cada campo exibido. 
+	std::cout << "|" << std::setw(10) << index; 
 	std::cout << "|" << std::setw(10) << format.getFirstName();
 	std::cout << "|" << std::setw(10) << format.getLastName();
 	std::cout << "|" << std::setw(10) << format.getNickname() << "|" << std::endl;

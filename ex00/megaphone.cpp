@@ -6,7 +6,7 @@
 /*   By: maclara- <maclara-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 12:02:31 by maclara-          #+#    #+#             */
-/*   Updated: 2023/06/11 16:33:30 by maclara-         ###   ########.fr       */
+/*   Updated: 2023/07/04 18:53:10 by maclara-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@ class Megaphone{
 
 public:
 
-    std::string msg; // No C++, o tipo string faz parte do namespace std e não existe fora dele. Portanto, 
-    // é necessário usar std::string para se referir ao tipo string da biblioteca padrão.
+    std::string msg; 
     
     Megaphone(void);
     ~Megaphone(void);
